@@ -1,5 +1,18 @@
 # rollup unit-test template
 
+## 介绍
+
+基于 rollup 的单元测试工具模板
+
+## 使用
+
+选择不同单元测试时，需要根据情况手动调整一下代码，以下是现有的 4 中测试方式：
+
+- `yarn test` 单元测试
+- `yarn nyctest` 单元测试及代码覆盖率
+- `yarn nyctest-env` 测试未打包的代码覆盖率
+- `yarn pupptest` 模拟真实浏览器环境测试
+
 ## 相关依赖
 
 - `@rollup/plugin-babel` (bable 与 rollup 的集成插件)
@@ -17,3 +30,5 @@
 - `nyc` 测试代码覆盖率
 - `puppeteer` 通过 DevTools 协议控制无头 Chrome 的高级 API，可用于自动化测试，爬虫
 - `mocha-jsdom` 将 jsdom 简单集成到 mocha 中
+
+## 贡献
