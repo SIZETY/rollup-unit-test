@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mocha</title>
+    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="../../node_modules/mocha/mocha.js"></script>
+    <script src="../../node_modules/expect.js/index.js"></script>
+    <script src="../../dist/bundle.aio.js"></script>
+
+    <script>
+      var libs = {
+        "expect.js": expect,
+        "../src/index": window.rollupTest,
+      };
+
+      var require = function (path) {
+        return libs[path];
+      };
+    </script>
+
+    <script>
+      mocha.setup("bdd");
+    </script>
+
+    <script src="../index.js"></script>
+
+    <script>
+      mocha.run();
+    </script>
+  </body>
+</html>
